@@ -14,22 +14,12 @@ export default function DownloadPage() {
         ? 'bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950' 
         : 'bg-gradient-to-br from-violet-50 via-white to-pink-50'
     }`}>
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* <div className={`absolute -top-1/2 -left-1/2 w-full h-full rounded-full opacity-30 blur-3xl transition-all duration-1000 ${
-          darkMode ? 'bg-gradient-to-r from-violet-600 to-purple-600' : 'bg-gradient-to-r from-violet-200 to-purple-200'
-        }`} style={{ transform: 'rotate(45deg)' }} /> */}
-        {/* <div className={`absolute -bottom-1/2 -right-1/2 w-full h-full rounded-full opacity-30 blur-3xl transition-all duration-1000 ${
-          darkMode ? 'bg-gradient-to-r from-blue-600 to-cyan-600' : 'bg-gradient-to-r from-blue-200 to-cyan-200'
-        }`} style={{ transform: 'rotate(-45deg)' }} /> */}
-      </div>
-
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(12)].map((_, i) => (
           <div
             key={i}
-            className={`absolute w-2 h-2 rounded-full opacity-40 transition-colors duration-1000 ${
+            className={`absolute w-1 h-1 sm:w-2 sm:h-2 rounded-full opacity-40 transition-colors duration-1000 ${
               darkMode ? 'bg-white' : 'bg-violet-400'
             }`}
             style={{
@@ -63,8 +53,8 @@ export default function DownloadPage() {
       `}</style>
 
       {/* Header Navigation */}
-      <nav className="relative z-20 flex justify-between items-center p-6">
-        <div className={`text-2xl font-bold transition-colors duration-500 ${
+      <nav className="relative z-20 flex justify-between items-center p-4 sm:p-6">
+        <div className={`text-xl sm:text-2xl font-bold transition-colors duration-500 ${
           darkMode ? 'text-white' : 'text-slate-800'
         }`}>
           ListenIQ
@@ -72,40 +62,30 @@ export default function DownloadPage() {
         
         <button
           onClick={toggleTheme}
-          className={`group flex items-center px-6 py-1 rounded-full backdrop-blur-xl transition-all duration-300 transform hover:scale-105 ${
+          className={`group flex items-center px-3 py-2 sm:px-6 sm:py-1 rounded-full backdrop-blur-xl transition-all duration-300 transform hover:scale-105 ${
             darkMode 
               ? 'bg-white/10 hover:bg-white/20 text-white border border-white/20 shadow-2xl' 
               : 'bg-white/60 hover:bg-white/80 text-slate-700 border border-white/40 shadow-2xl'
           }`}
         >
-          <div className="relative w-5 h-5 mr-3">
+          <div className="relative w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3">
             {darkMode ? (
-              <Sun className="w-5 h-5 transition-transform duration-500 group-hover:rotate-180" />
+              <Sun className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-500 group-hover:rotate-180" />
             ) : (
-              <Moon className="w-5 h-5 transition-transform duration-500 group-hover:rotate-12" />
+              <Moon className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-500 group-hover:rotate-12" />
             )}
           </div>
-          <span className="font-medium">
+          <span className="text-sm sm:font-medium">
             {darkMode ? "Light" : "Dark"}
           </span>
         </button>
       </nav>
 
       {/* Hero Section */}
-      <div className="relative z-10 px-6 pt-12 pb-20">
+      <div className="relative z-10 px-4 sm:px-6 pt-6 sm:pt-12 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto text-center">
-          {/* Badge */}
-          {/* <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-8 backdrop-blur-xl transition-all duration-500 ${
-            darkMode 
-              ? 'bg-gradient-to-r from-violet-500/20 to-purple-500/20 text-violet-300 border border-violet-400/30' 
-              : 'bg-gradient-to-r from-violet-100 to-purple-100 text-violet-700 border border-violet-200'
-          }`}>
-            {/* <Star className="w-4 h-4 mr-2" />
-            #1 Downloaded App This Month */}
-          {/* </div> */}
-
           {/* Main Hero */}
-          <h1 className={`text-6xl md:text-8xl font-black mb-8 leading-tight transition-colors duration-500 ${
+          <h1 className={`text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-6 sm:mb-8 leading-tight transition-colors duration-500 ${
             darkMode ? 'text-white' : 'text-slate-900'
           }`}>
             Download
@@ -114,7 +94,7 @@ export default function DownloadPage() {
             </span>
           </h1>
 
-          <p className={`text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed transition-colors duration-500 ${
+          <p className={`text-base sm:text-xl md:text-2xl mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-2 transition-colors duration-500 ${
             darkMode ? 'text-slate-300' : 'text-slate-600'
           }`}>
             Experience the future of mobile and desktop applications. 
@@ -124,11 +104,11 @@ export default function DownloadPage() {
       </div>
 
       {/* Download Cards */}
-      <div className="relative z-10 px-6 pb-20">
+      <div className="relative z-10 px-4 sm:px-6 pb-12 sm:pb-20">
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-center">
             {/* Mobile App Card */}
-            <div className={`group relative overflow-hidden rounded-3xl backdrop-blur-xl transition-all w-1/2 duration-700 transform hover:scale-105 hover:-translate-y-4 ${
+            <div className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl backdrop-blur-xl transition-all w-full max-w-lg duration-700 transform hover:scale-105 hover:-translate-y-4 ${
               darkMode 
                 ? 'bg-gradient-to-br from-white/10 to-white/5 border border-white/20 shadow-2xl hover:shadow-violet-500/30' 
                 : 'bg-gradient-to-br from-white/80 to-white/60 border border-white/60 shadow-2xl hover:shadow-violet-500/30'
@@ -139,25 +119,25 @@ export default function DownloadPage() {
               {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-violet-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-violet-500/10 group-hover:via-purple-500/10 group-hover:to-pink-500/10 transition-all duration-700" />
               
-              <div className="relative p-12">
+              <div className="relative p-6 sm:p-8 md:p-12">
                 {/* Icon Container */}
-                <div className={`inline-flex items-center justify-center w-24 h-24 rounded-3xl mb-8 transition-all duration-500 ${
+                <div className={`inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl sm:rounded-3xl mb-6 sm:mb-8 transition-all duration-500 ${
                   darkMode 
                     ? 'bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-400/40 group-hover:to-purple-400/40' 
                     : 'bg-gradient-to-br from-violet-100 to-purple-100 group-hover:from-violet-200 group-hover:to-purple-200'
                 }`} style={{ animation: 'pulse 3s infinite' }}>
-                  <Smartphone className={`w-12 h-12 transition-all duration-500 ${
+                  <Smartphone className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-500 ${
                     darkMode ? 'text-violet-300 group-hover:text-violet-200' : 'text-violet-600 group-hover:text-violet-700'
                   }`} />
                 </div>
                 
-                <h2 className={`text-4xl font-bold mb-6 transition-colors duration-500 ${
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 transition-colors duration-500 ${
                   darkMode ? 'text-white' : 'text-slate-800'
                 }`}>
                   Mobile App
                 </h2>
                 
-                <p className={`text-lg mb-8 leading-relaxed transition-colors duration-500 ${
+                <p className={`text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed transition-colors duration-500 ${
                   darkMode ? 'text-slate-300' : 'text-slate-600'
                 }`}>
                   Download the Android APK version of ListenIQ. Optimized for mobile devices with 
@@ -165,13 +145,13 @@ export default function DownloadPage() {
                 </p>
 
                 {/* Features */}
-                <div className="mb-8 space-y-3">
+                <div className="mb-6 sm:mb-8 space-y-2 sm:space-y-3">
                   {["Offline Mode", "Optimized for Mobile", "On device Processing"].map((feature, index) => (
                     <div key={index} className="flex items-center">
-                      <CheckCircle className={`w-5 h-5 mr-3 ${
+                      <CheckCircle className={`w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 ${
                         darkMode ? 'text-green-400' : 'text-green-500'
                       }`} />
-                      <span className={`${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>{feature}</span>
+                      <span className={`text-sm sm:text-base ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -179,20 +159,20 @@ export default function DownloadPage() {
                 <a
                   href="/downloads/myapp.apk"
                   download
-                  className={`group/btn inline-flex items-center px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 w-full justify-center ${
+                  className={`group/btn inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full justify-center ${
                     darkMode 
                       ? 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white shadow-2xl hover:shadow-violet-500/50' 
                       : 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-violet-600/50'
                   }`}
                 >
-                  <Download className="w-6 h-6 mr-3 transition-transform duration-300 group-hover/btn:scale-110" />
+                  <Download className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 transition-transform duration-300 group-hover/btn:scale-110" />
                   Download APK
                 </a>
 
-                <p className={`text-sm mt-4 text-center transition-colors duration-500 ${
+                <p className={`text-xs sm:text-sm mt-3 sm:mt-4 text-center transition-colors duration-500 ${
                   darkMode ? 'text-slate-400' : 'text-slate-500'
                 }`}>
-                  Version 1.1.2`` • 45.2 MB • Android 7.0+
+                  Version 1.1.2 • 45.2 MB • Android 7.0+
                 </p>
               </div>
             </div>
@@ -201,26 +181,26 @@ export default function DownloadPage() {
       </div>
 
       {/* Features Section */}
-      <div className="relative z-10 px-6 pb-10">
+      <div className="relative z-10 px-4 sm:px-6 pb-8 sm:pb-10">
         <div className="max-w-7xl mx-auto">
-          <div className={`rounded-4xl backdrop-blur-xl p-12 transition-all duration-500 ${
+          <div className={`rounded-2xl sm:rounded-3xl md:rounded-4xl backdrop-blur-xl p-6 sm:p-8 md:p-12 transition-all duration-500 ${
             darkMode 
               ? 'bg-gradient-to-br from-white/10 to-white/5 border border-white/20' 
               : 'bg-gradient-to-br from-white/80 to-white/60 border border-white/60'
           }`}>
-            <h3 className={`text-4xl font-bold text-center mb-4 transition-colors duration-500 ${
+            <h3 className={`text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-3 sm:mb-4 transition-colors duration-500 ${
               darkMode ? 'text-white' : 'text-slate-800'
             }`}>
               Why Choose ListenIQ?
             </h3>
             
-            <p className={`text-xl text-center mb-12 transition-colors duration-500 ${
+            <p className={`text-base sm:text-lg md:text-xl text-center mb-8 sm:mb-12 px-2 transition-colors duration-500 ${
               darkMode ? 'text-slate-300' : 'text-slate-600'
             }`}>
               Experience the new standard in mobile applications with cutting-edge features designed for personalization, security, and performance.
             </p>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
               {[
                 {
                   icon: Shield,
@@ -247,10 +227,10 @@ export default function DownloadPage() {
                   color: "indigo"
                 },
               ].map((feature, index) => (
-                <div key={index} className={`text-center group p-6 rounded-2xl transition-all duration-300 hover:scale-105 ${
+                <div key={index} className={`text-center group p-4 sm:p-6 rounded-xl sm:rounded-2xl transition-all duration-300 hover:scale-105 ${
                   darkMode ? 'hover:bg-white/5' : 'hover:bg-white/60'
                 }`}>
-                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-6 transition-all duration-500 ${
+                  <div className={`inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl mb-4 sm:mb-6 transition-all duration-500 ${
                     feature.color === 'emerald' 
                       ? (darkMode ? 'bg-emerald-500/20 text-emerald-400' : 'bg-emerald-100 text-emerald-600')
                       : feature.color === 'yellow'
@@ -259,12 +239,12 @@ export default function DownloadPage() {
                       ? (darkMode ? 'bg-blue-500/20 text-blue-400' : 'bg-blue-100 text-blue-600')
                       : (darkMode ? 'bg-purple-500/20 text-purple-400' : 'bg-purple-100 text-purple-600')
                   }`}>
-                    <feature.icon className="w-8 h-8" />
+                    <feature.icon className="w-6 h-6 sm:w-8 sm:h-8" />
                   </div>
-                  <h4 className={`text-xl font-bold mb-3 transition-colors duration-500 ${
+                  <h4 className={`text-lg sm:text-xl font-bold mb-2 sm:mb-3 transition-colors duration-500 ${
                     darkMode ? 'text-white' : 'text-slate-800'
                   }`}>{feature.title}</h4>
-                  <p className={`text-sm leading-relaxed transition-colors duration-500 ${
+                  <p className={`text-xs sm:text-sm leading-relaxed transition-colors duration-500 ${
                     darkMode ? 'text-slate-300' : 'text-slate-600'
                   }`}>{feature.description}</p>
                 </div>
@@ -274,37 +254,38 @@ export default function DownloadPage() {
         </div>
       </div>
 
-              <div className="max-w-7xl mx-auto text-center pb-10">
-                <a
-                target="_blank"
-                  href="https://github.com/Team-Manusmriti/ai-challenge-submission-project-manusmriti.git"
-                  className={`inline-flex items-center px-8 py-4 rounded-2xl font-bold text-lg transition-all duration-300 transform hover:scale-105 ${
-                    darkMode 
-                      ? 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white shadow-2xl hover:shadow-violet-500/50' 
-                      : 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-violet-600/50'
-                  }`}
-                >
-                  <LucideGithub className="w-6 h-6 mr-3 transition-transform duration-300 group-hover:scale-110" />
-                  Visit Our GitHub for Source Code
-                  <ArrowRight className="w-5 h-5 ml-3 transition-transform duration-300 group-hover:translate-x-2" />
-                </a>
-              </div>
-
+      {/* GitHub Link */}
+      <div className="max-w-7xl mx-auto text-center pb-8 sm:pb-10 px-4 sm:px-6">
+        <a
+          target="_blank"
+          href="https://github.com/Team-Manusmriti/ai-challenge-submission-project-manusmriti.git"
+          className={`inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 ${
+            darkMode 
+              ? 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white shadow-2xl hover:shadow-violet-500/50' 
+              : 'bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-700 hover:to-purple-700 text-white shadow-2xl hover:shadow-violet-600/50'
+          }`}
+        >
+          <LucideGithub className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 transition-transform duration-300 group-hover:scale-110" />
+          <span className="hidden sm:inline">Visit Our GitHub for Source Code</span>
+          <span className="sm:hidden">View Source Code</span>
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 ml-2 sm:ml-3 transition-transform duration-300 group-hover:translate-x-2" />
+        </a>
+      </div>
 
       {/* Footer */}
-      <footer className="relative z-10 px-6 pb-12">
+      <footer className="relative z-10 px-4 sm:px-6 pb-8 sm:pb-12">
         <div className="max-w-7xl mx-auto text-center">
-          <div className={`p-8 rounded-3xl backdrop-blur-xl transition-all duration-500 ${
+          <div className={`p-6 sm:p-8 rounded-2xl sm:rounded-3xl backdrop-blur-xl transition-all duration-500 ${
             darkMode 
               ? 'bg-white/5 border border-white/10' 
               : 'bg-white/60 border border-white/40'
           }`}>
-            <p className={`text-lg mb-4 transition-colors duration-500 ${
+            <p className={`text-base sm:text-lg mb-3 sm:mb-4 transition-colors duration-500 ${
               darkMode ? 'text-slate-300' : 'text-slate-600'
             }`}>
               Ready to transform your SmartPhone?
             </p>
-            <p className={`text-sm transition-colors duration-500 ${
+            <p className={`text-xs sm:text-sm transition-colors duration-500 ${
               darkMode ? 'text-slate-400' : 'text-slate-500'
             }`}>
               © 2025 ListenIQ Inc. All rights reserved. | Privacy Policy | Terms of Service

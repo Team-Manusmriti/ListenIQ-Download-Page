@@ -305,7 +305,7 @@ export default function DownloadPage() {
               © 2025 ListenIQ Inc. All rights reserved. | 
               <button 
                 onClick={openTermsModal}
-                className={`mx-1 hover:underline transition-colors duration-200 ${
+                className={`mx-1 hover:underline transition-colors duration-200 underline ${
                   darkMode ? 'hover:text-violet-400' : 'hover:text-violet-600'
                 }`}
               >

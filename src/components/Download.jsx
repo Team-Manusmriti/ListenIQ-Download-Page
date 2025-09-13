@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Download, Smartphone, Cpu, Server, Sun, Moon, LucideGithub, Shield, Zap, Users, ArrowRight, CheckCircle } from "lucide-react";
 import Modal from './PopupLayout';
 import TermsOfServiceContent from './TermsandCondition';
-import app_debug from '../assets/app-debug.apk';
 
 export default function DownloadPage() {
   const [darkMode, setDarkMode] = useState(true);
@@ -172,7 +171,7 @@ export default function DownloadPage() {
                 </div>
                 
                 <a
-                  href={app_debug}
+                  href="https://github.com/Team-Manusmriti/ListenIQ-Download-Page/releases/download/v1.0.0/app-debug.apk"
                   download
                   className={`group/btn inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full justify-center ${
                     darkMode 

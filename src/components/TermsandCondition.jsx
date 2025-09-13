@@ -128,7 +128,7 @@ const TermsOfServiceContent = ({ darkMode = true }) => {
         <div className={`text-sm text-center pt-6 border-t ${
           darkMode ? 'border-white/10 text-slate-400' : 'border-gray-200 text-slate-500'
         }`}>
-          Effective Date: September 13, 2025
+          Effective Date: September 14, 2025
         </div>
       </div>
     </div>

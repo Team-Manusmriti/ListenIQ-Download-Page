@@ -1,5 +1,4 @@
-import './App.css'
-import DownloadPage from './Download'
+import DownloadPage from './components/Download'
 
 function App() {
   return <DownloadPage />;

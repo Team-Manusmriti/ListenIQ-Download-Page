@@ -1,11 +1,31 @@
 import React, { useState } from "react";
 import { Download, Smartphone, Cpu, Server, Sun, Moon, LucideGithub, Shield, Zap, Users, ArrowRight, CheckCircle } from "lucide-react";
+import Modal from './PopupLayout';
+import TermsOfServiceContent from './TermsandCondition';
+import app_debug from '../assets/app-debug.apk';
 
 export default function DownloadPage() {
   const [darkMode, setDarkMode] = useState(true);
+  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
 
   const toggleTheme = () => {
     setDarkMode(!darkMode);
+  };
+
+  const openPrivacyModal = (e) => {
+    e.preventDefault();
+    setShowPrivacyModal(true);
+  };
+
+  const openTermsModal = (e) => {
+    e.preventDefault();
+    setShowTermsModal(true);
+  };
+
+  const closeModals = () => {
+    setShowPrivacyModal(false);
+    setShowTermsModal(false);
   };
 
   return (
@@ -126,7 +146,7 @@ export default function DownloadPage() {
                     ? 'bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-400/40 group-hover:to-purple-400/40' 
                     : 'bg-gradient-to-br from-violet-100 to-purple-100 group-hover:from-violet-200 group-hover:to-purple-200'
                 }`} style={{ animation: 'pulse 3s infinite' }}>
-                  <Smartphone className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-500 ${
+                  <Smartphone className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-500${
                     darkMode ? 'text-violet-300 group-hover:text-violet-200' : 'text-violet-600 group-hover:text-violet-700'
                   }`} />
                 </div>
@@ -157,7 +177,7 @@ export default function DownloadPage() {
                 </div>
                 
                 <a
-                  href="/downloads/myapp.apk"
+                  href={app_debug}
                   download
                   className={`group/btn inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full justify-center ${
                     darkMode 
@@ -172,7 +192,7 @@ export default function DownloadPage() {
                 <p className={`text-xs sm:text-sm mt-3 sm:mt-4 text-center transition-colors duration-500 ${
                   darkMode ? 'text-slate-400' : 'text-slate-500'
                 }`}>
-                  Version 1.1.2 • 45.2 MB • Android 7.0+
+                  Version 1.1.2 • 450.2 MB • Android 7.0+
                 </p>
               </div>
             </div>
@@ -288,11 +308,29 @@ export default function DownloadPage() {
             <p className={`text-xs sm:text-sm transition-colors duration-500 ${
               darkMode ? 'text-slate-400' : 'text-slate-500'
             }`}>
-              © 2025 ListenIQ Inc. All rights reserved. | Privacy Policy | Terms of Service
+              © 2025 ListenIQ Inc. All rights reserved. | 
+              <button 
+                onClick={openTermsModal}
+                className={`mx-1 hover:underline transition-colors duration-200 ${
+                  darkMode ? 'hover:text-violet-400' : 'hover:text-violet-600'
+                }`}
+              >
+                Terms & Conditions
+              </button>
             </p>
           </div>
         </div>
       </footer>
+
+      {/* Modal Components */}
+      <Modal
+        isOpen={showTermsModal}
+        onClose={closeModals}
+        title="Terms & Conditions"
+        darkMode={darkMode}
+      >
+        <TermsOfServiceContent darkMode={darkMode} />
+      </Modal>
     </div>
   );
 }

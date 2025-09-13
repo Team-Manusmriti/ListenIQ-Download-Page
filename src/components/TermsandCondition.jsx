@@ -10,9 +10,9 @@ const TermsOfServiceContent = ({ darkMode = true }) => {
             Acceptance of Terms
           </h3>
           <p className={`leading-relaxed ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
-            By downloading, installing, or using the Manusmriti AI Companion ("App"), 
-            you agree to be bound by these Terms and Conditions. 
-            If you do not agree with these Terms, you may not use the App.
+            By downloading, installing, accessing, or using our application ("App"), 
+            you agree to be bound by these Terms and Conditions ("Terms"). 
+            If you do not agree with any part of these terms, you may not use our App.
           </p>
         </section>
 

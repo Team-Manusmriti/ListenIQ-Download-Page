@@ -6,7 +6,6 @@ import app_debug from '../assets/app-debug.apk';
 
 export default function DownloadPage() {
   const [darkMode, setDarkMode] = useState(true);
-  const [showPrivacyModal, setShowPrivacyModal] = useState(false);
   const [showTermsModal, setShowTermsModal] = useState(false);
 
   const toggleTheme = () => {
@@ -141,6 +140,7 @@ export default function DownloadPage() {
               
               <div className="relative p-6 sm:p-8 md:p-12">
                 {/* Icon Container */}
+                <div className="flex justify-center">
                 <div className={`inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-2xl sm:rounded-3xl mb-6 sm:mb-8 transition-all duration-500 ${
                   darkMode 
                     ? 'bg-gradient-to-br from-violet-500/30 to-purple-500/30 group-hover:from-violet-400/40 group-hover:to-purple-400/40' 
@@ -149,6 +149,7 @@ export default function DownloadPage() {
                   <Smartphone className={`w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 transition-all duration-500${
                     darkMode ? 'text-violet-300 group-hover:text-violet-200' : 'text-violet-600 group-hover:text-violet-700'
                   }`} />
+                </div>
                 </div>
                 
                 <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 transition-colors duration-500 ${

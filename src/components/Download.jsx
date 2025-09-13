@@ -12,18 +12,12 @@ export default function DownloadPage() {
     setDarkMode(!darkMode);
   };
 
-  const openPrivacyModal = (e) => {
-    e.preventDefault();
-    setShowPrivacyModal(true);
-  };
-
   const openTermsModal = (e) => {
     e.preventDefault();
     setShowTermsModal(true);
   };
 
   const closeModals = () => {
-    setShowPrivacyModal(false);
     setShowTermsModal(false);
   };
 

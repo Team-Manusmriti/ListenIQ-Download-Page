@@ -144,8 +144,8 @@ export default function DownloadPage() {
                   }`} />
                 </div>
                 </div>
-                
-                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 transition-colors duration-500 ${
+
+                <h2 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center sm:mb-6 transition-colors duration-500 ${
                   darkMode ? 'text-white' : 'text-slate-800'
                 }`}>
                   Mobile App
@@ -219,7 +219,7 @@ export default function DownloadPage() {
                 {
                   icon: Shield,
                   title: "Security First",
-                  description: "End-to-end encryption with zero-knowledge architecture",
+                  description: "Encryption-first design with a zero-knowledge architecture",
                   color: "emerald"
                 },
                 {

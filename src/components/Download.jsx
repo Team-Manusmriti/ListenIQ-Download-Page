@@ -154,8 +154,7 @@ export default function DownloadPage() {
                 <p className={`text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed transition-colors duration-500 ${
                   darkMode ? 'text-slate-300' : 'text-slate-600'
                 }`}>
-                  Download the Android APK version of ListenIQ. Optimized for mobile devices with 
-                  intuitive touch controls and offline capabilities.
+                  Download the latest version of ListenIQ and step into the future of next-generation mobile apps.
                 </p>
 
                 {/* Features */}

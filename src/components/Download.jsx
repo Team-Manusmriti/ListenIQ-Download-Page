@@ -237,7 +237,7 @@ export default function DownloadPage() {
                 {
                   icon: Cpu,
                   title: "AI Powered",
-                  description: "Smart recommendations and automation with AI integration",
+                  description: "AI that remembers so you don’t have to",
                   color: "indigo"
                 },
               ].map((feature, index) => (

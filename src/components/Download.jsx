@@ -109,7 +109,7 @@ export default function DownloadPage() {
           <p className={`text-base sm:text-xl md:text-2xl mb-8 sm:mb-12 max-w-3xl mx-auto leading-relaxed px-2 transition-colors duration-500 ${
             darkMode ? 'text-slate-300' : 'text-slate-600'
           }`}>
-            Experience the future of mobile and desktop applications. 
+            Experience the future of mobile application. 
             <span className={`font-semibold ${darkMode ? 'text-violet-400' : 'text-violet-600'}`}> Fast, secure, and beautifully designed</span> for the modern user.
           </p>
         </div>

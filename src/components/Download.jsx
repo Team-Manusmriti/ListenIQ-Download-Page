@@ -170,7 +170,7 @@ export default function DownloadPage() {
                 </div>
                 
                 <a
-                  href="https://github.com/Team-Manusmriti/ListenIQ-Download-Page/releases/download/v2.0.0/app-debug.apk"
+                  href="https://github.com/Team-Manusmriti/ListenIQ-Download-Page/releases/download/v3.0.0/app-debug.apk"
                   download
                   className={`group/btn inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 transform hover:scale-105 w-full justify-center ${
                     darkMode 

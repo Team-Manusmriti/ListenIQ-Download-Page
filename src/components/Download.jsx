@@ -185,7 +185,7 @@ export default function DownloadPage() {
                 <p className={`text-xs sm:text-sm mt-3 sm:mt-4 text-center transition-colors duration-500 ${
                   darkMode ? 'text-slate-400' : 'text-slate-500'
                 }`}>
-                  Version 1.1.2 • 450.2 MB • Android 7.0+
+                  Version 1.1.2 • 350.2 MB • Android 7.0+
                 </p>
               </div>
             </div>
